@@ -19,22 +19,19 @@ class Component(object):
     def has_a(self, ctype):
         return False
 
-    def get_all(self):
-        return []
-
-    def get_all(self, ctype):
+    def get_all(self, ctype=None):
         return []
 
     def contains(self, component):
         return False
 
-    def attach_to(self, parent):
+    def attach(self, parent):
         if self.parent:
             raise AlreadyHasAParentError()
         parent.__attach_child(self)
         self.parent = parent
 
-    def detach_from_parent(self):
+    def detach(self):
         if not self.parent:
             raise DoesNotHaveAParentError()
         self.parent.__detach_child(self)
@@ -59,17 +56,17 @@ class ComponentContainer(Component):
                 return True
         return False
 
-    def get_all(self):
-        return self.components
-
     def get_all(self, ctype):
-        out = []
-        for component in self.components:
-            if isinstance(component, ctype):
-                out.append(component)
-            else:
-                out.extend(component.get_all(c_type))
-        return out
+        if ctype:
+            out = []
+            for component in self.components:
+                if isinstance(component, ctype):
+                    out.append(component)
+                else:
+                    out.extend(component.get_all(c_type))
+            return out
+        else:
+            return self.components
 
     def contains(self, component):
         for my_component in self.components:
