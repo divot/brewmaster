@@ -13,7 +13,7 @@ class Valve(component.ComponentContainer):
     def close(self):
         pass
 
-class ThreeWireValve(Valve):
+class BallValve(Valve):
 
     def __init__(self, open_port, close_port, time=5.0):
         self.open_switch = switch.GPIOSwitch(open_port)
@@ -28,3 +28,13 @@ class ThreeWireValve(Valve):
         self.open_switch.timed_cancel()
         self.close_switch.timed_on(self.time)
 
+class SolenoidValve(Valve):
+
+    def __init__(self, port):
+        self.switch = switch.GPIOSwitch(port)
+
+    def open(self):
+        self.switch.switch_on()
+
+    def close(self):
+        self.switch.switch_off()
