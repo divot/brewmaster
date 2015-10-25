@@ -69,6 +69,7 @@ class LiquidComponent(object):
         self.ports = {}
         for port in ports:
             self.ports[port] = LiquidPort(port, self, states)
+        self.state = states[0]
 
     def __str__(self):
         return self.name
@@ -95,3 +96,6 @@ class LiquidComponent(object):
 
         for state in self.states:
             self.ports[port].add_path(target, state)
+
+    def set_state(self, state):
+        self.state = state
