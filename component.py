@@ -1,45 +1,4 @@
 
-def find_all_paths(current_component,
-                   current_state,
-                   current_port,
-                   end_component,
-                   path=[],
-                   internal_path=[]):
-
-    internal_path = internal_path + [current_port]
-    new_path = path + [ (current_component, current_state, internal_path) ]
-
-    if current_component == end_component:
-        return [ new_path ]
-
-    paths = []
-
-    for port in current_port.graph[current_state]:
-
-        if port.parent_component is current_component:
-            if port not in internal_path:
-                foundpaths = find_all_paths(current_component,
-                                            current_state,
-                                            port,
-                                            end_component,
-                                            path,
-                                            internal_path)
-                for foundpath in foundpaths:
-                    paths.append(foundpath)
-
-        elif port.parent_component not in [elem[0] for elem in new_path]:
-            for state in port.parent_component.states:
-                foundpaths = find_all_paths(port.parent_component,
-                                            state,
-                                            port,
-                                            end_component,
-                                            new_path)
-                for foundpath in foundpaths:
-                    paths.append(foundpath)
-
-
-    return paths
-
 class Port(object):
 
     def __init__(self, name, parent_component, states):
@@ -58,6 +17,43 @@ class Port(object):
     def add_path(self, port, state):
         self.graph[state].append(port)
 
+    def find_all_paths(self,
+                       current_state,
+                       end_component,
+                       path=[],
+                       internal_path=[]):
+
+        internal_path = internal_path + [self]
+        new_path = path + [ (self.parent_component, current_state, internal_path) ]
+
+        if self.parent_component == end_component:
+            return [ new_path ]
+
+        paths = []
+
+        for port in self.graph[current_state]:
+
+            if port.parent_component is self.parent_component:
+                if port not in internal_path:
+                    foundpaths = port.find_all_paths(current_state,
+                                                     end_component,
+                                                     path,
+                                                     internal_path)
+                    for foundpath in foundpaths:
+                        paths.append(foundpath)
+
+            elif port.parent_component not in [elem[0] for elem in new_path]:
+                for state in port.parent_component.states:
+                    foundpaths = port.find_all_paths(state,
+                                                     end_component,
+                                                     new_path)
+                    for foundpath in foundpaths:
+                        paths.append(foundpath)
+
+
+        return paths
+
+
 class Component(object):
 
     DEFAULT_NAME = "Component"
@@ -72,7 +68,7 @@ class Component(object):
         self.states = states
         self.ports = {}
         for port in ports:
-            self.ports[port] = (Port(port, self, states))
+            self.ports[port] = Port(port, self, states)
 
     def __str__(self):
         return self.name
@@ -83,11 +79,9 @@ class Component(object):
     def find_all_paths(self, end_component):
         all_paths = []
         for state in self.states:
-            for port in self.ports:
-                all_paths += find_all_paths(self,
-                                            state,
-                                            self.ports[port],
-                                            end_component)
+            for port in self.ports.values():
+                all_paths += port.find_all_paths(state,
+                                                 end_component)
         return all_paths
 
     def add_path(self, target, port=None):
