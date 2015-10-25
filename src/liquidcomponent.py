@@ -1,5 +1,5 @@
 
-class Port(object):
+class LiquidPort(object):
 
     def __init__(self, name, parent_component, states):
         self.name = name
@@ -54,7 +54,7 @@ class Port(object):
         return paths
 
 
-class Component(object):
+class LiquidComponent(object):
 
     DEFAULT_NAME = "Component"
     DEFAULT_PORTS = [ "Port" ]
@@ -68,7 +68,7 @@ class Component(object):
         self.states = states
         self.ports = {}
         for port in ports:
-            self.ports[port] = Port(port, self, states)
+            self.ports[port] = LiquidPort(port, self, states)
 
     def __str__(self):
         return self.name
@@ -89,21 +89,21 @@ class Component(object):
             assert(len(self.ports) == 1)
             port = self.ports.values()[0].name
 
-        if isinstance(target, Component):
+        if isinstance(target, LiquidComponent):
             assert(len(target.ports) == 1)
             target = target.ports.values()[0]
 
         for state in self.states:
             self.ports[port].add_path(target, state)
 
-class Kettle(Component):
+class Kettle(LiquidComponent):
 
     DEFAULT_NAME = "Kettle"
 
     def __init__(self, name=DEFAULT_NAME):
         super(Kettle, self).__init__(name)
 
-class TwoWayValve(Component):
+class TwoWayValve(LiquidComponent):
 
     DEFAULT_NAME = "TwoWayValve"
     DEFAULT_PORTS = ["Port1", "Port2"]
@@ -117,7 +117,7 @@ class TwoWayValve(Component):
         self.ports[ports[0]].add_path(self.ports[ports[1]], self.states[1])
         self.ports[ports[1]].add_path(self.ports[ports[0]], self.states[1])
 
-class ThreeWayValve(Component):
+class ThreeWayValve(LiquidComponent):
 
     DEFAULT_NAME = "ThreeWayValve"
     DEFAULT_PORTS = ["CommonPort", "Port1", "Port2"]
