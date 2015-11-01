@@ -1,4 +1,22 @@
+import RPi.GPIO
 from smbus import SMBus
+
+class StandardGPIO(object):
+
+    GPIO.setmode(GPIO.BOARD)
+
+    def __init__(self, port):
+        self.port = port
+        GPIO.setup(self.port, GPIO.OUT)
+
+    def __del__(self):
+        GPIO.cleanup(self.port)
+
+    def on(self):
+        GPIO.output(self.port, GPIO.HIGH)
+
+    def off(self):
+        GPIO.output(self.port, GPIO.LOW)
 
 class PCF8574(object):
 
