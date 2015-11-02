@@ -70,6 +70,7 @@ class LiquidComponent(object):
         for port in ports:
             self.ports[port] = LiquidPort(port, self, states)
         self.state = states[0]
+        self.state_valid = True
 
     def __str__(self):
         return self.name
@@ -99,3 +100,6 @@ class LiquidComponent(object):
 
     def set_state(self, state):
         self.state = state
+
+    def wait_for_state(self):
+        pass

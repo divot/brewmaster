@@ -37,28 +37,54 @@ class ThreeWayValve(LiquidComponent):
 
 class TwoWayValveMISOLTwoWire(TwoWayValve):
 
+    DEFAULT_ACTION_TIME = 4
+
     def __init__(self,
                  closeio,
                  openio,
+                 action_time=DEFAULT_ACTION_TIME,
                  name=TwoWayValve.DEFAULT_NAME,
                  ports=TwoWayValve.DEFAULT_PORTS):
         super(TwoWayValveMISOLTwoWire, self).__init__(name, ports)
         self.openio = openio
         self.closeio = closeio
+        self.action_time = action_time
+        self.timer = None
         self.close()
 
     def set_state(self, state):
-        super(TwoWayValveMISOLTwoWire, self).set_state(state)
-        if state == "Closed":
+        if state == STATE_CLOSED:
             self.close()
-        elif state == "Open":
+        elif state == STATE_OPEN:
             self.open()
 
+    def wait_for_state(self):
+        if self.timer:
+            self.timer.join()
 
     def close(self):
         self.openio.off()
         self.closeio.on()
+        self._change_state("Closed")
 
     def open(self):
         self.closeio.off()
         self.openio.on()
+        self._change_state("Open")
+
+    def _change_state(self, state):
+        if self.timer:
+            self.timer.cancel()
+            del self.timer
+
+        self.state_valid = False
+        self.state = state
+
+        self.timer = threading.Timer(
+            self.action_time,
+            self._revalidate_state
+        )
+        self.timer.start()
+
+    def _revalidate_state(self):
+        self.state_valid = True
