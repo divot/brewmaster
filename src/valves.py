@@ -88,3 +88,5 @@ class TwoWayValveMISOLTwoWire(TwoWayValve):
 
     def _revalidate_state(self):
         self.state_valid = True
+        self.openio.off()
+        self.closeio.off()
