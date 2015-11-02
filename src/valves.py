@@ -1,5 +1,4 @@
 from liquidcomponent import LiquidComponent
-import RPi.GPIO as GPIO
 import threading
 
 class TwoWayValve(LiquidComponent):
@@ -39,20 +38,14 @@ class ThreeWayValve(LiquidComponent):
 class TwoWayValveMISOLTwoWire(TwoWayValve):
 
     def __init__(self,
-                 openio,
                  closeio,
+                 openio,
                  name=TwoWayValve.DEFAULT_NAME,
                  ports=TwoWayValve.DEFAULT_PORTS):
         super(TwoWayValveMISOLTwoWire, self).__init__(name, ports)
         self.openio = openio
         self.closeio = closeio
-        GPIO.setup(openio, GPIO.OUT)
-        GPIO.setup(closeio, GPIO.OUT)
         self.close()
-
-    def __del__(self):
-        GPIO.setup(openio, )
-        GPIO.setup(closeio, )
 
     def set_state(self, state):
         super(TwoWayValveMISOLTwoWire, self).set_state(state)
@@ -61,10 +54,11 @@ class TwoWayValveMISOLTwoWire(TwoWayValve):
         elif state == "Open":
             self.open()
 
-    def open(self):
-        GPIO.output(self.closeio, GPIO.LOW)
-        GPIO.output(self.openio, GPIO.HIGH)
 
     def close(self):
-        GPIO.output(self.openio, GPIO.LOW)
-        GPIO.output(self.closeio, GPIO.HIGH)
+        self.openio.off()
+        self.closeio.on()
+
+    def open(self):
+        self.closeio.off()
+        self.openio.on()
