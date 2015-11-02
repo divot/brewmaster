@@ -6,31 +6,35 @@ class TwoWayValve(LiquidComponent):
 
     DEFAULT_NAME = "TwoWayValve"
     DEFAULT_PORTS = ["Port1", "Port2"]
-    DEFAULT_STATES = ["Closed", "Open"]
+    STATE_CLOSED = "Closed"
+    STATE_OPEN = "Open"
+    STATES = [STATE_CLOSED, STATE_OPEN]
 
     def __init__(self,
                  name=DEFAULT_NAME,
-                 ports=DEFAULT_PORTS,
-                 states=DEFAULT_STATES):
-        super(TwoWayValve, self).__init__(name, ports, states)
-        self.ports[ports[0]].add_path(self.ports[ports[1]], self.states[1])
-        self.ports[ports[1]].add_path(self.ports[ports[0]], self.states[1])
+                 ports=DEFAULT_PORTS):
+        super(TwoWayValve, self).__init__(name, ports, self.STATES)
+        self.ports[ports[0]].add_path(self.ports[ports[1]], TwoWayValve.STATE_OPEN)
+        self.ports[ports[1]].add_path(self.ports[ports[0]], TwoWayValve.STATE_OPEN)
 
 class ThreeWayValve(LiquidComponent):
 
     DEFAULT_NAME = "ThreeWayValve"
     DEFAULT_PORTS = ["CommonPort", "Port1", "Port2"]
-    DEFAULT_STATES = ["Port1", "Port2"]
+    STATES = ["Position0", "Position1"]
+    STATE_POSITION_0 = STATES[0]
+    STATE_POSITION_1 = STATES[1]
 
     def __init__(self,
                  name=DEFAULT_NAME,
-                 ports=DEFAULT_PORTS,
-                 states=DEFAULT_STATES):
-        super(ThreeWayValve, self).__init__(name, ports, states)
-        self.ports[ports[0]].add_path(self.ports[ports[1]], self.states[0])
-        self.ports[ports[1]].add_path(self.ports[ports[0]], self.states[0])
-        self.ports[ports[0]].add_path(self.ports[ports[2]], self.states[1])
-        self.ports[ports[2]].add_path(self.ports[ports[0]], self.states[1])
+                 ports=DEFAULT_PORTS):
+        super(ThreeWayValve, self).__init__(name,
+                                            ports,
+                                            self.STATES)
+        self.ports[ports[0]].add_path(self.ports[ports[1]], ThreeWayValve.STATE_POSITION_0)
+        self.ports[ports[1]].add_path(self.ports[ports[0]], ThreeWayValve.STATE_POSITION_0)
+        self.ports[ports[0]].add_path(self.ports[ports[2]], ThreeWayValve.STATE_POSITION_1)
+        self.ports[ports[2]].add_path(self.ports[ports[0]], ThreeWayValve.STATE_POSITION_1)
 
 class TwoWayValveMISOLTwoWire(TwoWayValve):
 
