@@ -1,0 +1,378 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ValveController-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4550 2200 1000 200 
+U 563A6BDC
+F0 "Valve2" 60
+F1 "InvertedHBridge.sch" 60
+F2 "Input_1" I L 4550 2250 60 
+F3 "Input_2" I L 4550 2350 60 
+F4 "Output_A" O R 5550 2250 60 
+F5 "Output_B" O R 5550 2350 60 
+$EndSheet
+$Sheet
+S 4550 2600 1000 200 
+U 563A7438
+F0 "Valve3" 60
+F1 "InvertedHBridge.sch" 60
+F2 "Input_1" I L 4550 2650 60 
+F3 "Input_2" I L 4550 2750 60 
+F4 "Output_A" O R 5550 2650 60 
+F5 "Output_B" O R 5550 2750 60 
+$EndSheet
+$Sheet
+S 4550 3000 1000 200 
+U 563A83B0
+F0 "Valve4" 60
+F1 "InvertedHBridge.sch" 60
+F2 "Input_1" I L 4550 3050 60 
+F3 "Input_2" I L 4550 3150 60 
+F4 "Output_A" O R 5550 3050 60 
+F5 "Output_B" O R 5550 3150 60 
+$EndSheet
+$Comp
+L CONN_01X02 P105
+U 1 1 563AC683
+P 5800 1900
+F 0 "P105" H 5800 2050 50  0000 C CNN
+F 1 "CONN_01X02" V 5900 1900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 5800 1900 60  0001 C CNN
+F 3 "" H 5800 1900 60  0000 C CNN
+	1    5800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P106
+U 1 1 563AC716
+P 5800 2300
+F 0 "P106" H 5800 2450 50  0000 C CNN
+F 1 "CONN_01X02" V 5900 2300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 5800 2300 60  0001 C CNN
+F 3 "" H 5800 2300 60  0000 C CNN
+	1    5800 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P107
+U 1 1 563AC823
+P 5800 2700
+F 0 "P107" H 5800 2850 50  0000 C CNN
+F 1 "CONN_01X02" V 5900 2700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 5800 2700 60  0001 C CNN
+F 3 "" H 5800 2700 60  0000 C CNN
+	1    5800 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P108
+U 1 1 563AC8F0
+P 5800 3100
+F 0 "P108" H 5800 3250 50  0000 C CNN
+F 1 "CONN_01X02" V 5900 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 5800 3100 60  0001 C CNN
+F 3 "" H 5800 3100 60  0000 C CNN
+	1    5800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L PCF8574 U101
+U 1 1 563ACA80
+P 3450 2250
+F 0 "U101" H 3100 2850 50  0000 L CNN
+F 1 "PCF8574" H 3550 2850 50  0000 L CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 3450 2250 60  0001 C CNN
+F 3 "" H 3450 2250 60  0000 C CNN
+	1    3450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P102
+U 1 1 563ACEA2
+P 2200 2050
+F 0 "P102" H 2200 2250 50  0000 C CNN
+F 1 "CONN_01X03" V 2300 2050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2200 2050 60  0001 C CNN
+F 3 "" H 2200 2050 60  0000 C CNN
+	1    2200 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P103
+U 1 1 563ACFE1
+P 2200 2400
+F 0 "P103" H 2200 2600 50  0000 C CNN
+F 1 "CONN_01X03" V 2300 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2200 2400 60  0001 C CNN
+F 3 "" H 2200 2400 60  0000 C CNN
+	1    2200 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P104
+U 1 1 563AD092
+P 2200 2750
+F 0 "P104" H 2200 2950 50  0000 C CNN
+F 1 "CONN_01X03" V 2300 2750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2200 2750 60  0001 C CNN
+F 3 "" H 2200 2750 60  0000 C CNN
+	1    2200 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR01
+U 1 1 563AD20F
+P 3450 1550
+F 0 "#PWR01" H 3450 1400 50  0001 C CNN
+F 1 "+3.3V" H 3450 1690 50  0000 C CNN
+F 2 "" H 3450 1550 60  0000 C CNN
+F 3 "" H 3450 1550 60  0000 C CNN
+	1    3450 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 563AD64B
+P 3450 2950
+F 0 "#PWR02" H 3450 2700 50  0001 C CNN
+F 1 "GND" H 3450 2800 50  0000 C CNN
+F 2 "" H 3450 2950 60  0000 C CNN
+F 3 "" H 3450 2950 60  0000 C CNN
+	1    3450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 563AD6CF
+P 2450 2950
+F 0 "#PWR03" H 2450 2700 50  0001 C CNN
+F 1 "GND" H 2450 2800 50  0000 C CNN
+F 2 "" H 2450 2950 60  0000 C CNN
+F 3 "" H 2450 2950 60  0000 C CNN
+	1    2450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR04
+U 1 1 563AD7C3
+P 2550 1900
+F 0 "#PWR04" H 2550 1750 50  0001 C CNN
+F 1 "+3.3V" H 2550 2040 50  0000 C CNN
+F 2 "" H 2550 1900 60  0000 C CNN
+F 3 "" H 2550 1900 60  0000 C CNN
+	1    2550 1900
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 4550 1801 1000 199 
+U 563A8614
+F0 "Valve1" 60
+F1 "InvertedHBridge.sch" 60
+F2 "Input_1" I L 4550 1850 60 
+F3 "Input_2" I L 4550 1950 60 
+F4 "Output_A" O R 5550 1850 60 
+F5 "Output_B" O R 5550 1950 60 
+$EndSheet
+Wire Wire Line
+	2400 2150 2950 2150
+Wire Wire Line
+	2400 2500 2750 2500
+Wire Wire Line
+	2750 2500 2750 2250
+Wire Wire Line
+	2750 2250 2950 2250
+Wire Wire Line
+	2400 2850 2850 2850
+Wire Wire Line
+	2850 2850 2850 2350
+Wire Wire Line
+	2850 2350 2950 2350
+Wire Wire Line
+	2550 1900 2550 2650
+Wire Wire Line
+	2550 1950 2400 1950
+Wire Wire Line
+	2550 2300 2400 2300
+Connection ~ 2550 1950
+Wire Wire Line
+	2550 2650 2400 2650
+Connection ~ 2550 2300
+Wire Wire Line
+	2450 2050 2450 2950
+Wire Wire Line
+	2450 2050 2400 2050
+Wire Wire Line
+	2450 2400 2400 2400
+Connection ~ 2450 2400
+Wire Wire Line
+	2450 2750 2400 2750
+Connection ~ 2450 2750
+Wire Wire Line
+	2950 1850 2850 1850
+Wire Wire Line
+	2750 1950 2950 1950
+Wire Wire Line
+	2750 1450 2750 1950
+Wire Wire Line
+	5550 2250 5600 2250
+Wire Wire Line
+	5550 2350 5600 2350
+Wire Wire Line
+	5550 2650 5600 2650
+Wire Wire Line
+	5550 2750 5600 2750
+Wire Wire Line
+	5550 3050 5600 3050
+Wire Wire Line
+	5550 3150 5600 3150
+Wire Wire Line
+	5550 1850 5600 1850
+Wire Wire Line
+	5550 1950 5600 1950
+Wire Wire Line
+	3950 1850 4000 1850
+Wire Wire Line
+	4000 1850 4000 3150
+Wire Wire Line
+	4000 3150 4550 3150
+Wire Wire Line
+	3950 1950 4050 1950
+Wire Wire Line
+	4050 1950 4050 3050
+Wire Wire Line
+	4050 3050 4550 3050
+Wire Wire Line
+	3950 2050 4100 2050
+Wire Wire Line
+	4100 2050 4100 2750
+Wire Wire Line
+	4100 2750 4550 2750
+Wire Wire Line
+	3950 2150 4150 2150
+Wire Wire Line
+	4150 2150 4150 2650
+Wire Wire Line
+	4150 2650 4550 2650
+Wire Wire Line
+	3950 2250 4250 2250
+Wire Wire Line
+	4250 2250 4250 2350
+Wire Wire Line
+	4250 2350 4550 2350
+Wire Wire Line
+	3950 2350 4200 2350
+Wire Wire Line
+	4200 2350 4200 2300
+Wire Wire Line
+	4200 2300 4300 2300
+Wire Wire Line
+	4300 2300 4300 2250
+Wire Wire Line
+	4300 2250 4550 2250
+Wire Wire Line
+	3950 2450 4350 2450
+Wire Wire Line
+	4350 2450 4350 1950
+Wire Wire Line
+	4350 1950 4550 1950
+Wire Wire Line
+	3950 2550 4400 2550
+Wire Wire Line
+	4400 2550 4400 1850
+Wire Wire Line
+	4400 1850 4550 1850
+$Comp
+L CONN_01X05 P101
+U 1 1 563B4B52
+P 2200 1450
+F 0 "P101" H 2200 1750 50  0000 C CNN
+F 1 "CONN_01X05" V 2300 1450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x05" H 2200 1450 60  0001 C CNN
+F 3 "" H 2200 1450 60  0000 C CNN
+	1    2200 1450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR05
+U 1 1 563B4CAD
+P 2400 1250
+F 0 "#PWR05" H 2400 1100 50  0001 C CNN
+F 1 "+12V" H 2400 1390 50  0000 C CNN
+F 2 "" H 2400 1250 60  0000 C CNN
+F 3 "" H 2400 1250 60  0000 C CNN
+	1    2400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR06
+U 1 1 563B4DDE
+P 2550 1350
+F 0 "#PWR06" H 2550 1200 50  0001 C CNN
+F 1 "+3.3V" H 2550 1490 50  0000 C CNN
+F 2 "" H 2550 1350 60  0000 C CNN
+F 3 "" H 2550 1350 60  0000 C CNN
+	1    2550 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1350 2550 1350
+$Comp
+L GND #PWR07
+U 1 1 563B4FE4
+P 2400 1650
+F 0 "#PWR07" H 2400 1400 50  0001 C CNN
+F 1 "GND" H 2400 1500 50  0000 C CNN
+F 2 "" H 2400 1650 60  0000 C CNN
+F 3 "" H 2400 1650 60  0000 C CNN
+	1    2400 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1450 2400 1450
+Wire Wire Line
+	2850 1550 2400 1550
+Wire Wire Line
+	2850 1850 2850 1550
+$EndSCHEMATC
