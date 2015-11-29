@@ -1,0 +1,491 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 6300 1500 1300 350 
+U 565AA59F
+F0 "SubPumpController1" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 1600 60 
+F3 "OutputLow" O R 7600 1750 60 
+F4 "Input" I L 6300 1650 60 
+$EndSheet
+$Sheet
+S 6300 2050 1300 350 
+U 565ABFE5
+F0 "SubPumpController2" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 2150 60 
+F3 "OutputLow" O R 7600 2300 60 
+F4 "Input" I L 6300 2200 60 
+$EndSheet
+$Sheet
+S 6300 2600 1300 350 
+U 565AC6CE
+F0 "SubPumpController3" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 2700 60 
+F3 "OutputLow" O R 7600 2850 60 
+F4 "Input" I L 6300 2750 60 
+$EndSheet
+$Sheet
+S 6300 3150 1300 350 
+U 565AC6D3
+F0 "SubPumpController4" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 3250 60 
+F3 "OutputLow" O R 7600 3400 60 
+F4 "Input" I L 6300 3300 60 
+$EndSheet
+$Sheet
+S 6300 3700 1300 350 
+U 565B0350
+F0 "SubPumpController5" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 3800 60 
+F3 "OutputLow" O R 7600 3950 60 
+F4 "Input" I L 6300 3850 60 
+$EndSheet
+$Sheet
+S 6300 4250 1300 350 
+U 565B0355
+F0 "SubPumpController6" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 4350 60 
+F3 "OutputLow" O R 7600 4500 60 
+F4 "Input" I L 6300 4400 60 
+$EndSheet
+$Sheet
+S 6300 4800 1300 350 
+U 565B035A
+F0 "SubPumpController7" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 4900 60 
+F3 "OutputLow" O R 7600 5050 60 
+F4 "Input" I L 6300 4950 60 
+$EndSheet
+$Sheet
+S 6300 5350 1300 350 
+U 565B035F
+F0 "SubPumpController8" 60
+F1 "PumpControllerSub.sch" 60
+F2 "OutputHigh" O R 7600 5450 60 
+F3 "OutputLow" O R 7600 5600 60 
+F4 "Input" I L 6300 5500 60 
+$EndSheet
+$Comp
+L PCF8574A U101
+U 1 1 565B23D3
+P 4900 3650
+F 0 "U101" H 4550 4250 50  0000 L CNN
+F 1 "PCF8574A" H 5000 4250 50  0000 L CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 4900 3650 60  0001 C CNN
+F 3 "" H 4900 3650 60  0000 C CNN
+	1    4900 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3300 6200 3300
+Wire Wire Line
+	6200 3300 6200 3550
+Wire Wire Line
+	6200 3550 5400 3550
+Wire Wire Line
+	6300 3850 6200 3850
+Wire Wire Line
+	6200 3850 6200 3650
+Wire Wire Line
+	6200 3650 5400 3650
+Wire Wire Line
+	5400 3450 6100 3450
+Wire Wire Line
+	6100 3450 6100 2750
+Wire Wire Line
+	6100 2750 6300 2750
+Wire Wire Line
+	6300 2200 6000 2200
+Wire Wire Line
+	6000 2200 6000 3350
+Wire Wire Line
+	6000 3350 5400 3350
+Wire Wire Line
+	5400 3250 5900 3250
+Wire Wire Line
+	5900 3250 5900 1650
+Wire Wire Line
+	5900 1650 6300 1650
+Wire Wire Line
+	6300 4400 6100 4400
+Wire Wire Line
+	6100 4400 6100 3750
+Wire Wire Line
+	6100 3750 5400 3750
+Wire Wire Line
+	5400 3850 6000 3850
+Wire Wire Line
+	6000 3850 6000 4950
+Wire Wire Line
+	6000 4950 6300 4950
+Wire Wire Line
+	5400 3950 5900 3950
+Wire Wire Line
+	5900 3950 5900 5500
+Wire Wire Line
+	5900 5500 6300 5500
+$Comp
+L +3.3V #PWR01
+U 1 1 565B2E0B
+P 4900 2950
+F 0 "#PWR01" H 4900 2800 50  0001 C CNN
+F 1 "+3.3V" H 4900 3090 50  0000 C CNN
+F 2 "" H 4900 2950 60  0000 C CNN
+F 3 "" H 4900 2950 60  0000 C CNN
+	1    4900 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 565B4737
+P 4900 4350
+F 0 "#PWR02" H 4900 4100 50  0001 C CNN
+F 1 "GND" H 4900 4200 50  0000 C CNN
+F 2 "" H 4900 4350 60  0000 C CNN
+F 3 "" H 4900 4350 60  0000 C CNN
+	1    4900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P105
+U 1 1 565BC5A6
+P 8000 1650
+F 0 "P105" H 8000 1800 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 1650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 1650 60  0001 C CNN
+F 3 "" H 8000 1650 60  0000 C CNN
+	1    8000 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P106
+U 1 1 565BC69D
+P 8000 2200
+F 0 "P106" H 8000 2350 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 2200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 2200 60  0001 C CNN
+F 3 "" H 8000 2200 60  0000 C CNN
+	1    8000 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P107
+U 1 1 565BC764
+P 8000 2750
+F 0 "P107" H 8000 2900 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 2750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 2750 60  0001 C CNN
+F 3 "" H 8000 2750 60  0000 C CNN
+	1    8000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P108
+U 1 1 565BC82E
+P 8000 3300
+F 0 "P108" H 8000 3450 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 3300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 3300 60  0001 C CNN
+F 3 "" H 8000 3300 60  0000 C CNN
+	1    8000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P109
+U 1 1 565BC8FB
+P 8000 3850
+F 0 "P109" H 8000 4000 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 3850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 3850 60  0001 C CNN
+F 3 "" H 8000 3850 60  0000 C CNN
+	1    8000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P110
+U 1 1 565BC9BF
+P 8000 4400
+F 0 "P110" H 8000 4550 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 4400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 4400 60  0001 C CNN
+F 3 "" H 8000 4400 60  0000 C CNN
+	1    8000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P111
+U 1 1 565BCA86
+P 8000 4950
+F 0 "P111" H 8000 5100 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 4950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 4950 60  0001 C CNN
+F 3 "" H 8000 4950 60  0000 C CNN
+	1    8000 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P112
+U 1 1 565BCB68
+P 8000 5500
+F 0 "P112" H 8000 5650 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 5500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 8000 5500 60  0001 C CNN
+F 3 "" H 8000 5500 60  0000 C CNN
+	1    8000 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1600 7800 1600
+Wire Wire Line
+	7600 1750 7800 1750
+Wire Wire Line
+	7800 1750 7800 1700
+Wire Wire Line
+	7800 2150 7600 2150
+Wire Wire Line
+	7600 2300 7800 2300
+Wire Wire Line
+	7800 2300 7800 2250
+Wire Wire Line
+	7600 2700 7800 2700
+Wire Wire Line
+	7600 2850 7800 2850
+Wire Wire Line
+	7800 2850 7800 2800
+Wire Wire Line
+	7600 3250 7800 3250
+Wire Wire Line
+	7600 3400 7800 3400
+Wire Wire Line
+	7800 3400 7800 3350
+Wire Wire Line
+	7600 3800 7800 3800
+Wire Wire Line
+	7600 3950 7800 3950
+Wire Wire Line
+	7800 3950 7800 3900
+Wire Wire Line
+	7600 4350 7800 4350
+Wire Wire Line
+	7600 4500 7800 4500
+Wire Wire Line
+	7800 4500 7800 4450
+Wire Wire Line
+	7600 4900 7800 4900
+Wire Wire Line
+	7600 5050 7800 5050
+Wire Wire Line
+	7800 5050 7800 5000
+Wire Wire Line
+	7600 5450 7800 5450
+Wire Wire Line
+	7600 5600 7800 5600
+Wire Wire Line
+	7800 5600 7800 5550
+$Comp
+L CONN_01X03 P102
+U 1 1 565C2F60
+P 3600 3450
+F 0 "P102" H 3600 3650 50  0000 C CNN
+F 1 "CONN_01X03" V 3700 3450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 3600 3450 60  0001 C CNN
+F 3 "" H 3600 3450 60  0000 C CNN
+	1    3600 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P103
+U 1 1 565C3079
+P 3600 3950
+F 0 "P103" H 3600 4150 50  0000 C CNN
+F 1 "CONN_01X03" V 3700 3950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 3600 3950 60  0001 C CNN
+F 3 "" H 3600 3950 60  0000 C CNN
+	1    3600 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P104
+U 1 1 565C3156
+P 3600 4450
+F 0 "P104" H 3600 4650 50  0000 C CNN
+F 1 "CONN_01X03" V 3700 4450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 3600 4450 60  0001 C CNN
+F 3 "" H 3600 4450 60  0000 C CNN
+	1    3600 4450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 3550 3800 3550
+Wire Wire Line
+	4400 3750 4300 3750
+Wire Wire Line
+	4300 3750 4300 4550
+Wire Wire Line
+	4300 4550 3800 4550
+Wire Wire Line
+	4400 3650 4200 3650
+Wire Wire Line
+	4200 3650 4200 4050
+Wire Wire Line
+	4200 4050 3800 4050
+$Comp
+L GND #PWR03
+U 1 1 565C33BD
+P 3900 4700
+F 0 "#PWR03" H 3900 4450 50  0001 C CNN
+F 1 "GND" H 3900 4550 50  0000 C CNN
+F 2 "" H 3900 4700 60  0000 C CNN
+F 3 "" H 3900 4700 60  0000 C CNN
+	1    3900 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4450 3900 4450
+Wire Wire Line
+	3900 3450 3900 4700
+Wire Wire Line
+	3900 3950 3800 3950
+Connection ~ 3900 4450
+Wire Wire Line
+	3900 3450 3800 3450
+Connection ~ 3900 3950
+$Comp
+L +3.3V #PWR04
+U 1 1 565C424C
+P 4000 3250
+F 0 "#PWR04" H 4000 3100 50  0001 C CNN
+F 1 "+3.3V" H 4000 3390 50  0000 C CNN
+F 2 "" H 4000 3250 60  0000 C CNN
+F 3 "" H 4000 3250 60  0000 C CNN
+	1    4000 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3350 4000 3350
+Wire Wire Line
+	4000 3250 4000 4350
+Wire Wire Line
+	4000 3850 3800 3850
+Connection ~ 4000 3350
+Wire Wire Line
+	4000 4350 3800 4350
+Connection ~ 4000 3850
+$Comp
+L CONN_01X05 P101
+U 1 1 565C4B59
+P 3600 2400
+F 0 "P101" H 3600 2700 50  0000 C CNN
+F 1 "CONN_01X05" V 3700 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x05" H 3600 2400 60  0001 C CNN
+F 3 "" H 3600 2400 60  0000 C CNN
+	1    3600 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 565C4C9E
+P 3900 2750
+F 0 "#PWR05" H 3900 2500 50  0001 C CNN
+F 1 "GND" H 3900 2600 50  0000 C CNN
+F 2 "" H 3900 2750 60  0000 C CNN
+F 3 "" H 3900 2750 60  0000 C CNN
+	1    3900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2600 3900 2600
+Wire Wire Line
+	3900 2600 3900 2750
+Wire Wire Line
+	3800 2500 4300 2500
+Wire Wire Line
+	4300 2500 4300 3250
+Wire Wire Line
+	4300 3250 4400 3250
+Wire Wire Line
+	4400 3350 4200 3350
+Wire Wire Line
+	4200 3350 4200 2400
+Wire Wire Line
+	4200 2400 3800 2400
+$Comp
+L +12V #PWR06
+U 1 1 565C5484
+P 3900 2100
+F 0 "#PWR06" H 3900 1950 50  0001 C CNN
+F 1 "+12V" H 3900 2240 50  0000 C CNN
+F 2 "" H 3900 2100 60  0000 C CNN
+F 3 "" H 3900 2100 60  0000 C CNN
+	1    3900 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR07
+U 1 1 565C5542
+P 4200 2100
+F 0 "#PWR07" H 4200 1950 50  0001 C CNN
+F 1 "+3.3V" H 4200 2240 50  0000 C CNN
+F 2 "" H 4200 2100 60  0000 C CNN
+F 3 "" H 4200 2100 60  0000 C CNN
+	1    4200 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2200 3900 2200
+Wire Wire Line
+	3900 2200 3900 2100
+Wire Wire Line
+	3800 2300 4200 2300
+Wire Wire Line
+	4200 2300 4200 2100
+$EndSCHEMATC
