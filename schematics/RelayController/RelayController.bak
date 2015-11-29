@@ -1,0 +1,486 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RelayController-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7100 950  1250 350 
+U 565A988A
+F0 "SubRelayController1" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 1100 60 
+F3 "OutputLow" O R 8350 1050 60 
+F4 "OutputHigh" O R 8350 1200 60 
+$EndSheet
+$Sheet
+S 7100 1550 1250 350 
+U 565AC915
+F0 "SubRelayController2" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 1700 60 
+F3 "OutputLow" O R 8350 1650 60 
+F4 "OutputHigh" O R 8350 1800 60 
+$EndSheet
+$Sheet
+S 7100 2150 1250 350 
+U 565ACF6E
+F0 "SubRelayController3" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 2300 60 
+F3 "OutputLow" O R 8350 2250 60 
+F4 "OutputHigh" O R 8350 2400 60 
+$EndSheet
+$Sheet
+S 7100 2750 1250 350 
+U 565ACF73
+F0 "SubRelayController4" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 2900 60 
+F3 "OutputLow" O R 8350 2850 60 
+F4 "OutputHigh" O R 8350 3000 60 
+$EndSheet
+$Sheet
+S 7100 3350 1250 350 
+U 565AE61C
+F0 "SubRelayController5" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 3500 60 
+F3 "OutputLow" O R 8350 3450 60 
+F4 "OutputHigh" O R 8350 3600 60 
+$EndSheet
+$Sheet
+S 7100 3950 1250 350 
+U 565AE621
+F0 "SubRelayController6" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 4100 60 
+F3 "OutputLow" O R 8350 4050 60 
+F4 "OutputHigh" O R 8350 4200 60 
+$EndSheet
+$Sheet
+S 7100 4550 1250 350 
+U 565AE626
+F0 "SubRelayController7" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 4700 60 
+F3 "OutputLow" O R 8350 4650 60 
+F4 "OutputHigh" O R 8350 4800 60 
+$EndSheet
+$Sheet
+S 7100 5150 1250 350 
+U 565AE62B
+F0 "SubRelayController8" 60
+F1 "RelayControllerSub.sch" 60
+F2 "Input" I L 7100 5300 60 
+F3 "OutputLow" O R 8350 5250 60 
+F4 "OutputHigh" O R 8350 5400 60 
+$EndSheet
+$Comp
+L PCF8574A U?
+U 1 1 565B3FB6
+P 5500 3200
+F 0 "U?" H 5150 3800 50  0000 L CNN
+F 1 "PCF8574A" H 5600 3800 50  0000 L CNN
+F 2 "" H 5500 3200 60  0000 C CNN
+F 3 "" H 5500 3200 60  0000 C CNN
+	1    5500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2800 6000 1100
+Wire Wire Line
+	6000 1100 7100 1100
+Wire Wire Line
+	6000 2900 6100 2900
+Wire Wire Line
+	6100 2900 6100 1700
+Wire Wire Line
+	6100 1700 7100 1700
+Wire Wire Line
+	6000 3000 6200 3000
+Wire Wire Line
+	6200 3000 6200 2300
+Wire Wire Line
+	6200 2300 7100 2300
+Wire Wire Line
+	6000 3100 6300 3100
+Wire Wire Line
+	6300 3100 6300 2900
+Wire Wire Line
+	6300 2900 7100 2900
+Wire Wire Line
+	6000 3200 6300 3200
+Wire Wire Line
+	6300 3200 6300 3500
+Wire Wire Line
+	6300 3500 7100 3500
+Wire Wire Line
+	6000 3300 6200 3300
+Wire Wire Line
+	6200 3300 6200 4100
+Wire Wire Line
+	6200 4100 7100 4100
+Wire Wire Line
+	6000 3400 6100 3400
+Wire Wire Line
+	6100 3400 6100 4700
+Wire Wire Line
+	6100 4700 7100 4700
+Wire Wire Line
+	6000 3500 6000 5300
+Wire Wire Line
+	6000 5300 7100 5300
+$Comp
+L +3.3V #PWR?
+U 1 1 565B9610
+P 5500 2500
+F 0 "#PWR?" H 5500 2350 50  0001 C CNN
+F 1 "+3.3V" H 5500 2640 50  0000 C CNN
+F 2 "" H 5500 2500 60  0000 C CNN
+F 3 "" H 5500 2500 60  0000 C CNN
+	1    5500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 565B96B6
+P 5500 3900
+F 0 "#PWR?" H 5500 3650 50  0001 C CNN
+F 1 "GND" H 5500 3750 50  0000 C CNN
+F 2 "" H 5500 3900 60  0000 C CNN
+F 3 "" H 5500 3900 60  0000 C CNN
+	1    5500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P?
+U 1 1 565BD6F9
+P 3950 2250
+F 0 "P?" H 3950 2550 50  0000 C CNN
+F 1 "CONN_01X05" V 4050 2250 50  0000 C CNN
+F 2 "" H 3950 2250 60  0000 C CNN
+F 3 "" H 3950 2250 60  0000 C CNN
+	1    3950 2250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P?
+U 1 1 565BD940
+P 3950 3000
+F 0 "P?" H 3950 3200 50  0000 C CNN
+F 1 "CONN_01X03" V 4050 3000 50  0000 C CNN
+F 2 "" H 3950 3000 60  0000 C CNN
+F 3 "" H 3950 3000 60  0000 C CNN
+	1    3950 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P?
+U 1 1 565BDA34
+P 3950 3500
+F 0 "P?" H 3950 3700 50  0000 C CNN
+F 1 "CONN_01X03" V 4050 3500 50  0000 C CNN
+F 2 "" H 3950 3500 60  0000 C CNN
+F 3 "" H 3950 3500 60  0000 C CNN
+	1    3950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P?
+U 1 1 565BDB54
+P 3950 4000
+F 0 "P?" H 3950 4200 50  0000 C CNN
+F 1 "CONN_01X03" V 4050 4000 50  0000 C CNN
+F 2 "" H 3950 4000 60  0000 C CNN
+F 3 "" H 3950 4000 60  0000 C CNN
+	1    3950 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 3100 5000 3100
+Wire Wire Line
+	5000 3300 4900 3300
+Wire Wire Line
+	4900 3300 4900 4100
+Wire Wire Line
+	4900 4100 4150 4100
+Wire Wire Line
+	5000 3200 4800 3200
+Wire Wire Line
+	4800 3200 4800 3600
+Wire Wire Line
+	4800 3600 4150 3600
+$Comp
+L GND #PWR?
+U 1 1 565BF120
+P 4250 4200
+F 0 "#PWR?" H 4250 3950 50  0001 C CNN
+F 1 "GND" H 4250 4050 50  0000 C CNN
+F 2 "" H 4250 4200 60  0000 C CNN
+F 3 "" H 4250 4200 60  0000 C CNN
+	1    4250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4000 4250 4000
+Wire Wire Line
+	4250 3000 4250 4200
+Wire Wire Line
+	4150 3500 4250 3500
+Connection ~ 4250 4000
+Wire Wire Line
+	4150 3000 4250 3000
+Connection ~ 4250 3500
+$Comp
+L +3.3V #PWR?
+U 1 1 565BF31F
+P 4350 2800
+F 0 "#PWR?" H 4350 2650 50  0001 C CNN
+F 1 "+3.3V" H 4350 2940 50  0000 C CNN
+F 2 "" H 4350 2800 60  0000 C CNN
+F 3 "" H 4350 2800 60  0000 C CNN
+	1    4350 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2900 4350 2900
+Wire Wire Line
+	4350 2800 4350 3900
+Wire Wire Line
+	4350 3400 4150 3400
+Connection ~ 4350 2900
+Wire Wire Line
+	4350 3900 4150 3900
+Connection ~ 4350 3400
+Wire Wire Line
+	4150 2350 4800 2350
+Wire Wire Line
+	4800 2350 4800 2800
+Wire Wire Line
+	4800 2800 5000 2800
+Wire Wire Line
+	5000 2900 4700 2900
+Wire Wire Line
+	4700 2900 4700 2250
+Wire Wire Line
+	4700 2250 4150 2250
+$Comp
+L GND #PWR?
+U 1 1 565BFF09
+P 4150 2550
+F 0 "#PWR?" H 4150 2300 50  0001 C CNN
+F 1 "GND" H 4150 2400 50  0000 C CNN
+F 2 "" H 4150 2550 60  0000 C CNN
+F 3 "" H 4150 2550 60  0000 C CNN
+	1    4150 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2450 4150 2550
+$Comp
+L +12V #PWR?
+U 1 1 565C0E0B
+P 4250 1950
+F 0 "#PWR?" H 4250 1800 50  0001 C CNN
+F 1 "+12V" H 4250 2090 50  0000 C CNN
+F 2 "" H 4250 1950 60  0000 C CNN
+F 3 "" H 4250 1950 60  0000 C CNN
+	1    4250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 565C0EB9
+P 4500 1950
+F 0 "#PWR?" H 4500 1800 50  0001 C CNN
+F 1 "+3.3V" H 4500 2090 50  0000 C CNN
+F 2 "" H 4500 1950 60  0000 C CNN
+F 3 "" H 4500 1950 60  0000 C CNN
+	1    4500 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2050 4250 2050
+Wire Wire Line
+	4250 2050 4250 1950
+Wire Wire Line
+	4150 2150 4500 2150
+Wire Wire Line
+	4500 2150 4500 1950
+$Comp
+L CONN_01X02 P?
+U 1 1 565C40EB
+P 8700 1100
+F 0 "P?" H 8700 1250 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 1100 50  0000 C CNN
+F 2 "" H 8700 1100 60  0000 C CNN
+F 3 "" H 8700 1100 60  0000 C CNN
+	1    8700 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C42FC
+P 8700 1700
+F 0 "P?" H 8700 1850 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 1700 50  0000 C CNN
+F 2 "" H 8700 1700 60  0000 C CNN
+F 3 "" H 8700 1700 60  0000 C CNN
+	1    8700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C43F0
+P 8700 2300
+F 0 "P?" H 8700 2450 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 2300 50  0000 C CNN
+F 2 "" H 8700 2300 60  0000 C CNN
+F 3 "" H 8700 2300 60  0000 C CNN
+	1    8700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C44C0
+P 8700 2900
+F 0 "P?" H 8700 3050 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 2900 50  0000 C CNN
+F 2 "" H 8700 2900 60  0000 C CNN
+F 3 "" H 8700 2900 60  0000 C CNN
+	1    8700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C5D5A
+P 8700 3500
+F 0 "P?" H 8700 3650 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 3500 50  0000 C CNN
+F 2 "" H 8700 3500 60  0000 C CNN
+F 3 "" H 8700 3500 60  0000 C CNN
+	1    8700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C5E36
+P 8700 4100
+F 0 "P?" H 8700 4250 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 4100 50  0000 C CNN
+F 2 "" H 8700 4100 60  0000 C CNN
+F 3 "" H 8700 4100 60  0000 C CNN
+	1    8700 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C5F1B
+P 8700 4700
+F 0 "P?" H 8700 4850 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 4700 50  0000 C CNN
+F 2 "" H 8700 4700 60  0000 C CNN
+F 3 "" H 8700 4700 60  0000 C CNN
+	1    8700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 565C744B
+P 8700 5300
+F 0 "P?" H 8700 5450 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 5300 50  0000 C CNN
+F 2 "" H 8700 5300 60  0000 C CNN
+F 3 "" H 8700 5300 60  0000 C CNN
+	1    8700 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 1050 8500 1050
+Wire Wire Line
+	8350 1200 8500 1200
+Wire Wire Line
+	8500 1200 8500 1150
+Wire Wire Line
+	8350 1650 8500 1650
+Wire Wire Line
+	8350 1800 8500 1800
+Wire Wire Line
+	8500 1800 8500 1750
+Wire Wire Line
+	8350 2250 8500 2250
+Wire Wire Line
+	8350 2400 8500 2400
+Wire Wire Line
+	8500 2400 8500 2350
+Wire Wire Line
+	8350 2850 8500 2850
+Wire Wire Line
+	8350 3000 8500 3000
+Wire Wire Line
+	8500 3000 8500 2950
+Wire Wire Line
+	8350 3450 8500 3450
+Wire Wire Line
+	8350 3600 8500 3600
+Wire Wire Line
+	8500 3600 8500 3550
+Wire Wire Line
+	8350 4050 8500 4050
+Wire Wire Line
+	8350 4200 8500 4200
+Wire Wire Line
+	8500 4200 8500 4150
+Wire Wire Line
+	8350 4650 8500 4650
+Wire Wire Line
+	8350 4800 8500 4800
+Wire Wire Line
+	8500 4800 8500 4750
+Wire Wire Line
+	8350 5250 8500 5250
+Wire Wire Line
+	8350 5400 8500 5400
+Wire Wire Line
+	8500 5400 8500 5350
+$EndSCHEMATC

@@ -1,0 +1,175 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RelayController-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BC547 Q?
+U 1 1 565A9895
+P 6350 3400
+F 0 "Q?" H 6550 3475 50  0000 L CNN
+F 1 "BC547" H 6550 3400 50  0000 L CNN
+F 2 "TO-92" H 6550 3325 50  0000 L CIN
+F 3 "" H 6350 3400 50  0000 L CNN
+	1    6350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC547 Q?
+U 1 1 565A9A3D
+P 5750 3700
+F 0 "Q?" H 5950 3775 50  0000 L CNN
+F 1 "BC547" H 5950 3700 50  0000 L CNN
+F 2 "TO-92" H 5950 3625 50  0000 L CIN
+F 3 "" H 5750 3700 50  0000 L CNN
+	1    5750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 565A9B06
+P 6000 3400
+F 0 "R?" V 6080 3400 50  0000 C CNN
+F 1 "1K" V 6000 3400 50  0000 C CNN
+F 2 "" V 5930 3400 30  0000 C CNN
+F 3 "" H 6000 3400 30  0000 C CNN
+	1    6000 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 565A9B65
+P 5850 3150
+F 0 "R?" V 5930 3150 50  0000 C CNN
+F 1 "1K" V 5850 3150 50  0000 C CNN
+F 2 "" V 5780 3150 30  0000 C CNN
+F 3 "" H 5850 3150 30  0000 C CNN
+	1    5850 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3300 5850 3500
+Connection ~ 5850 3400
+$Comp
+L R R?
+U 1 1 565A9BF6
+P 5400 3700
+F 0 "R?" V 5480 3700 50  0000 C CNN
+F 1 "1K" V 5400 3700 50  0000 C CNN
+F 2 "" V 5330 3700 30  0000 C CNN
+F 3 "" H 5400 3700 30  0000 C CNN
+	1    5400 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 565A9C73
+P 5850 3900
+F 0 "#PWR?" H 5850 3650 50  0001 C CNN
+F 1 "GND" H 5850 3750 50  0000 C CNN
+F 2 "" H 5850 3900 60  0000 C CNN
+F 3 "" H 5850 3900 60  0000 C CNN
+	1    5850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 565A9C91
+P 6450 3600
+F 0 "#PWR?" H 6450 3350 50  0001 C CNN
+F 1 "GND" H 6450 3450 50  0000 C CNN
+F 2 "" H 6450 3600 60  0000 C CNN
+F 3 "" H 6450 3600 60  0000 C CNN
+	1    6450 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 565AA328
+P 5850 3000
+F 0 "#PWR?" H 5850 2850 50  0001 C CNN
+F 1 "+3.3V" H 5850 3140 50  0000 C CNN
+F 2 "" H 5850 3000 60  0000 C CNN
+F 3 "" H 5850 3000 60  0000 C CNN
+	1    5850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3200 6450 3100
+$Comp
+L D D?
+U 1 1 565AA458
+P 6450 2950
+F 0 "D?" H 6450 3050 50  0000 C CNN
+F 1 "1N4048" H 6450 2850 50  0000 C CNN
+F 2 "" H 6450 2950 60  0000 C CNN
+F 3 "" H 6450 2950 60  0000 C CNN
+	1    6450 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 2700 6450 2800
+$Comp
+L +12V #PWR?
+U 1 1 565AA36C
+P 6450 2700
+F 0 "#PWR?" H 6450 2550 50  0001 C CNN
+F 1 "+12V" H 6450 2840 50  0000 C CNN
+F 2 "" H 6450 2700 60  0000 C CNN
+F 3 "" H 6450 2700 60  0000 C CNN
+	1    6450 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3150 6600 3150
+Connection ~ 6450 3150
+Wire Wire Line
+	6450 2750 6600 2750
+Connection ~ 6450 2750
+Text HLabel 5250 3700 0    60   Input ~ 0
+Input
+Text HLabel 6600 3150 2    60   Output ~ 0
+OutputLow
+Text HLabel 6600 2750 2    60   Output ~ 0
+OutputHigh
+$EndSCHEMATC

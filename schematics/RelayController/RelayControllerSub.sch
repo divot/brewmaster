@@ -1,0 +1,255 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RelayController-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BC547 Q202
+U 1 1 565A9895
+P 6350 3400
+AR Path="/565A988A/565A9895" Ref="Q202"  Part="1" 
+AR Path="/565AC915/565A9895" Ref="Q302"  Part="1" 
+AR Path="/565ACF6E/565A9895" Ref="Q402"  Part="1" 
+AR Path="/565ACF73/565A9895" Ref="Q502"  Part="1" 
+AR Path="/565AE61C/565A9895" Ref="Q602"  Part="1" 
+AR Path="/565AE621/565A9895" Ref="Q702"  Part="1" 
+AR Path="/565AE626/565A9895" Ref="Q802"  Part="1" 
+AR Path="/565AE62B/565A9895" Ref="Q902"  Part="1" 
+F 0 "Q902" H 6550 3475 50  0000 L CNN
+F 1 "BC547" H 6550 3400 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 6550 3325 50  0000 L CIN
+F 3 "" H 6350 3400 50  0000 L CNN
+	1    6350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC547 Q201
+U 1 1 565A9A3D
+P 5750 3700
+AR Path="/565A988A/565A9A3D" Ref="Q201"  Part="1" 
+AR Path="/565AC915/565A9A3D" Ref="Q301"  Part="1" 
+AR Path="/565ACF6E/565A9A3D" Ref="Q401"  Part="1" 
+AR Path="/565ACF73/565A9A3D" Ref="Q501"  Part="1" 
+AR Path="/565AE61C/565A9A3D" Ref="Q601"  Part="1" 
+AR Path="/565AE621/565A9A3D" Ref="Q701"  Part="1" 
+AR Path="/565AE626/565A9A3D" Ref="Q801"  Part="1" 
+AR Path="/565AE62B/565A9A3D" Ref="Q901"  Part="1" 
+F 0 "Q901" H 5950 3775 50  0000 L CNN
+F 1 "BC547" H 5950 3700 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 5950 3625 50  0000 L CIN
+F 3 "" H 5750 3700 50  0000 L CNN
+	1    5750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R203
+U 1 1 565A9B06
+P 6000 3400
+AR Path="/565A988A/565A9B06" Ref="R203"  Part="1" 
+AR Path="/565AC915/565A9B06" Ref="R303"  Part="1" 
+AR Path="/565ACF6E/565A9B06" Ref="R403"  Part="1" 
+AR Path="/565ACF73/565A9B06" Ref="R503"  Part="1" 
+AR Path="/565AE61C/565A9B06" Ref="R603"  Part="1" 
+AR Path="/565AE621/565A9B06" Ref="R703"  Part="1" 
+AR Path="/565AE626/565A9B06" Ref="R803"  Part="1" 
+AR Path="/565AE62B/565A9B06" Ref="R903"  Part="1" 
+F 0 "R903" V 6080 3400 50  0000 C CNN
+F 1 "1K" V 6000 3400 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5930 3400 30  0001 C CNN
+F 3 "" H 6000 3400 30  0000 C CNN
+	1    6000 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R202
+U 1 1 565A9B65
+P 5850 3150
+AR Path="/565A988A/565A9B65" Ref="R202"  Part="1" 
+AR Path="/565AC915/565A9B65" Ref="R302"  Part="1" 
+AR Path="/565ACF6E/565A9B65" Ref="R402"  Part="1" 
+AR Path="/565ACF73/565A9B65" Ref="R502"  Part="1" 
+AR Path="/565AE61C/565A9B65" Ref="R602"  Part="1" 
+AR Path="/565AE621/565A9B65" Ref="R702"  Part="1" 
+AR Path="/565AE626/565A9B65" Ref="R802"  Part="1" 
+AR Path="/565AE62B/565A9B65" Ref="R902"  Part="1" 
+F 0 "R902" V 5930 3150 50  0000 C CNN
+F 1 "1K" V 5850 3150 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5780 3150 30  0001 C CNN
+F 3 "" H 5850 3150 30  0000 C CNN
+	1    5850 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3300 5850 3500
+Connection ~ 5850 3400
+$Comp
+L R R201
+U 1 1 565A9BF6
+P 5400 3700
+AR Path="/565A988A/565A9BF6" Ref="R201"  Part="1" 
+AR Path="/565AC915/565A9BF6" Ref="R301"  Part="1" 
+AR Path="/565ACF6E/565A9BF6" Ref="R401"  Part="1" 
+AR Path="/565ACF73/565A9BF6" Ref="R501"  Part="1" 
+AR Path="/565AE61C/565A9BF6" Ref="R601"  Part="1" 
+AR Path="/565AE621/565A9BF6" Ref="R701"  Part="1" 
+AR Path="/565AE626/565A9BF6" Ref="R801"  Part="1" 
+AR Path="/565AE62B/565A9BF6" Ref="R901"  Part="1" 
+F 0 "R901" V 5480 3700 50  0000 C CNN
+F 1 "1K" V 5400 3700 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5330 3700 30  0001 C CNN
+F 3 "" H 5400 3700 30  0000 C CNN
+	1    5400 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 565A9C73
+P 5850 3900
+AR Path="/565A988A/565A9C73" Ref="#PWR08"  Part="1" 
+AR Path="/565AC915/565A9C73" Ref="#PWR012"  Part="1" 
+AR Path="/565ACF6E/565A9C73" Ref="#PWR016"  Part="1" 
+AR Path="/565ACF73/565A9C73" Ref="#PWR020"  Part="1" 
+AR Path="/565AE61C/565A9C73" Ref="#PWR024"  Part="1" 
+AR Path="/565AE621/565A9C73" Ref="#PWR028"  Part="1" 
+AR Path="/565AE626/565A9C73" Ref="#PWR032"  Part="1" 
+AR Path="/565AE62B/565A9C73" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 5850 3650 50  0001 C CNN
+F 1 "GND" H 5850 3750 50  0000 C CNN
+F 2 "" H 5850 3900 60  0000 C CNN
+F 3 "" H 5850 3900 60  0000 C CNN
+	1    5850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 565A9C91
+P 6450 3600
+AR Path="/565A988A/565A9C91" Ref="#PWR09"  Part="1" 
+AR Path="/565AC915/565A9C91" Ref="#PWR013"  Part="1" 
+AR Path="/565ACF6E/565A9C91" Ref="#PWR017"  Part="1" 
+AR Path="/565ACF73/565A9C91" Ref="#PWR021"  Part="1" 
+AR Path="/565AE61C/565A9C91" Ref="#PWR025"  Part="1" 
+AR Path="/565AE621/565A9C91" Ref="#PWR029"  Part="1" 
+AR Path="/565AE626/565A9C91" Ref="#PWR033"  Part="1" 
+AR Path="/565AE62B/565A9C91" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 6450 3350 50  0001 C CNN
+F 1 "GND" H 6450 3450 50  0000 C CNN
+F 2 "" H 6450 3600 60  0000 C CNN
+F 3 "" H 6450 3600 60  0000 C CNN
+	1    6450 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR010
+U 1 1 565AA328
+P 5850 3000
+AR Path="/565A988A/565AA328" Ref="#PWR010"  Part="1" 
+AR Path="/565AC915/565AA328" Ref="#PWR014"  Part="1" 
+AR Path="/565ACF6E/565AA328" Ref="#PWR018"  Part="1" 
+AR Path="/565ACF73/565AA328" Ref="#PWR022"  Part="1" 
+AR Path="/565AE61C/565AA328" Ref="#PWR026"  Part="1" 
+AR Path="/565AE621/565AA328" Ref="#PWR030"  Part="1" 
+AR Path="/565AE626/565AA328" Ref="#PWR034"  Part="1" 
+AR Path="/565AE62B/565AA328" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 5850 2850 50  0001 C CNN
+F 1 "+3.3V" H 5850 3140 50  0000 C CNN
+F 2 "" H 5850 3000 60  0000 C CNN
+F 3 "" H 5850 3000 60  0000 C CNN
+	1    5850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3200 6450 3100
+$Comp
+L D D201
+U 1 1 565AA458
+P 6450 2950
+AR Path="/565A988A/565AA458" Ref="D201"  Part="1" 
+AR Path="/565AC915/565AA458" Ref="D301"  Part="1" 
+AR Path="/565ACF6E/565AA458" Ref="D401"  Part="1" 
+AR Path="/565ACF73/565AA458" Ref="D501"  Part="1" 
+AR Path="/565AE61C/565AA458" Ref="D601"  Part="1" 
+AR Path="/565AE621/565AA458" Ref="D701"  Part="1" 
+AR Path="/565AE626/565AA458" Ref="D801"  Part="1" 
+AR Path="/565AE62B/565AA458" Ref="D901"  Part="1" 
+F 0 "D901" H 6450 3050 50  0000 C CNN
+F 1 "1N4048" H 6450 2850 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 6450 2950 60  0001 C CNN
+F 3 "" H 6450 2950 60  0000 C CNN
+	1    6450 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 2700 6450 2800
+$Comp
+L +12V #PWR011
+U 1 1 565AA36C
+P 6450 2700
+AR Path="/565A988A/565AA36C" Ref="#PWR011"  Part="1" 
+AR Path="/565AC915/565AA36C" Ref="#PWR015"  Part="1" 
+AR Path="/565ACF6E/565AA36C" Ref="#PWR019"  Part="1" 
+AR Path="/565ACF73/565AA36C" Ref="#PWR023"  Part="1" 
+AR Path="/565AE61C/565AA36C" Ref="#PWR027"  Part="1" 
+AR Path="/565AE621/565AA36C" Ref="#PWR031"  Part="1" 
+AR Path="/565AE626/565AA36C" Ref="#PWR035"  Part="1" 
+AR Path="/565AE62B/565AA36C" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 6450 2550 50  0001 C CNN
+F 1 "+12V" H 6450 2840 50  0000 C CNN
+F 2 "" H 6450 2700 60  0000 C CNN
+F 3 "" H 6450 2700 60  0000 C CNN
+	1    6450 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3150 6600 3150
+Connection ~ 6450 3150
+Wire Wire Line
+	6450 2750 6600 2750
+Connection ~ 6450 2750
+Text HLabel 5250 3700 0    60   Input ~ 0
+Input
+Text HLabel 6600 3150 2    60   Output ~ 0
+OutputLow
+Text HLabel 6600 2750 2    60   Output ~ 0
+OutputHigh
+$EndSCHEMATC
