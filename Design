@@ -1,0 +1,94 @@
+I need to build a liquid simulator.
+
+I have a number of real world objects including:
+     Kettles
+     Pipes
+     Valves (Effectively more complex pipes)
+     Pumps
+     Water Sources
+     Drains
+
+Each of these have some combinations of:
+     Volume
+     Inputs
+     Outputs
+     Rates of flow
+     Whether or not they can overflow
+
+I need to think in terms of passive and active items:
+     - Pumps are active that pull liquid from one side and
+       push liquid to the next.
+     - Water sources push liquid
+     - Drains pull liquid
+
+Simple example:
+       A kettle is hooked up to a water source.
+       The kettle can hold 10 litres.
+       The kettle can overflow.
+       The kettle can receive liquid at an infinite rate.
+       The kettle can give liquid at an infinite rate.
+       The kettle does not push nor pull, it is passive.
+
+Each object has a number of ports
+     - A kettle only has one port, but that port has a near infinite rate at which can push/pull
+     - A pipe generally has two or three ports, normally rate limited. Except what to do about pressure!?
+
+To simplify things I could stop thinking about flow and instead start with things being manual. I can add in some kind of flow monitoring later.
+Then all I need to think about is the paths which liquid can take.
+-- The liquid will flow from x to y until you press stop.
+-- Assume pumps and pipes have no volume
+-- Water only flows from volume to volume (and sources and drains)
+
+
+Ok, so thinking in terms of paths then.
+We have volumes and paths.
+By path I mean liquid can flow from point a to point b
+Which means for a and b I need a term of what to call them, let's call that a port.
+Each volume will have one port, which all valves pipes etc connect to.
+Pipes and valves are uni-directional.
+Pumps are not.
+Some connections are not.
+Maybe I need to think in terms of inputs and outputs.
+How do I deal with loops?
+
+Ok, seriously, I only care about flow routes between volumes, sources and drains.
+And I only care about inputs and outputs.
+But some devices have multiple seperate inputs and outputs.
+
+Simple model.
+A volume has a single input and a single output.
+A pipe has a single input and a single output.
+A pump has a single input and a single output.
+A valve has multiple inputs and multiple outputs.
+  - These are connected correctly internally.
+
+Each input and output might be connected to many valves
+Paths between inputs and outputs are handled internally
+
+
+
+
+
+
+Oooook.
+
+Every item has ports.
+Every item has state.
+
+Each port maintains its own graph of connections.
+
+
+
+Find internal paths
+Find external paths
+
+
+I need to find internal routes and external routes.
+
+So, I'm going to start off with component1 and ask how to I get to component2.
+
+So I'll go over component1 and start searching for component2 from each of its ports
+
+so for component1 I loop over the ports and find all the external connections
+
+For each external connection
